@@ -1,0 +1,10 @@
+---
+- name: Copy files to multiple server
+  hosts: all
+  become: true 
+
+  tasks: 
+   - name: Copy files from source to destination
+     copy: 
+      src: /var/lib/awx/projects/files/test1
+      dest: /home/nadda/ 
