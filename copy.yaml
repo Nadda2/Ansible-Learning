@@ -8,3 +8,4 @@
      copy: 
       src: /var/lib/awx/projects/files/test1
       dest: /home/nadda/ 
+      remote_src: yes
