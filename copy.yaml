@@ -6,6 +6,6 @@
   tasks: 
    - name: Copy files from source to destination
      copy: 
-      src: /tmp/test/test2
+      src: tmp/test/test2
       dest: /home/nadda/ 
       remote_src: yes
