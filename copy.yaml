@@ -6,6 +6,6 @@
   tasks: 
    - name: Copy files from source to destination
      copy: 
-      src: tmp/test/
+      src: tmp/
       dest: /home/nadda/ 
       
