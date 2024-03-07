@@ -6,6 +6,6 @@
   tasks: 
    - name: Copy files from source to destination
      copy: 
-      src: /projects/files/
+      src: /var/lib/awx/projects/
       dest: /home/nadda/ 
       
