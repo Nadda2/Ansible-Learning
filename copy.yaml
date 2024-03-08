@@ -6,5 +6,5 @@
   tasks:
    - name: Copy files from source to destination
      copy:
-      src: /runner/project/
+      src: /runner/project/Commands
       dest: /home/nadda/
