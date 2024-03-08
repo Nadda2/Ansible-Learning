@@ -1,11 +1,10 @@
 ---
 - name: Copy files to multiple server
   hosts: all
-  become: true 
+  become: true
 
-  tasks: 
+  tasks:
    - name: Copy files from source to destination
-     copy: 
-      src: test1
-      dest: /home/nadda/ 
-      
+     copy:
+      src: /runner/project/
+      dest: /home/nadda/
