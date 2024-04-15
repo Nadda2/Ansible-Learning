@@ -1,6 +1,6 @@
 ---
 - name: Test Playbook to Use AWX Custom Credentials
-  hosts: localhost  # Assuming the playbook runs locally
+  hosts: all  # Assuming the playbook runs locally
 
   tasks:
     - name: Lookup AWX Custom Credential
