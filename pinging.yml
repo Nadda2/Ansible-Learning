@@ -1,6 +1,23 @@
 ---
-- name: Pinging
-  hosts: all
-  tasks: 
-   - name: Pinging 
-     ping: 
+- name: Test Playbook to Use AWX Custom Credentials
+  hosts: localhost  # Assuming the playbook runs locally
+
+  tasks:
+    - name: Lookup AWX Custom Credential
+      awx.awx.awx_credential_info:
+        name: "test store"  # Specify the name of your custom credential
+      register: credential_info
+
+    - name: Display AWX Credential Info
+      debug:
+        msg: "AWX Credential ID: {{ credential_info.id }}, Username: {{ credential_info.inputs.username }}"
+
+    - name: Use AWX Credential in Task
+      shell: |
+        echo "Using AWX Credential Username: {{ credential_info.inputs.username }}"
+        echo "Using AWX Credential Password: {{ credential_info.inputs.password }}"
+      register: command_output
+
+    - name: Display Command Output
+      debug:
+        msg: "Command Output: {{ command_output.stdout }}"
